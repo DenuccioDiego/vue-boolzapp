@@ -64,6 +64,14 @@
                          </div>
                     </div>
 
+                    <div id="chat_contacts" class="row">
+                         <div v-for="(item, index) in contacts" class="list_contact_chat ps-4 border-bottom"> 
+                              <img class="rounded-circle py-4 col-4" v-bind:src="'./asset/img/avatar'+ item.avatar +'.jpg'" alt="">
+                              <span class="col-8">{{item.name}}</span>
+                             
+                         </div>
+
+                    </div>
 
                </div>
 
@@ -73,7 +81,7 @@
                </div>
 
                <div>
-                    
+
                </div>
 
           </div>

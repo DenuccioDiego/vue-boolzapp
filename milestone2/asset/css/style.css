@@ -1,0 +1,124 @@
+#app{
+     background-color: aqua;
+}
+
+#background_header{
+     background-color: #009688;
+     height: 20vh;
+     
+}
+
+#background_main{
+     background-color: #d8dbd6;
+     height: 80vh;
+     
+}
+
+#main_container{
+     position: relative;
+     width: 100%;
+
+}
+
+#container_primary{
+     position: absolute;
+     width: 100%;
+}
+
+#container_secondary{
+     position: absolute;
+     z-index: 1;
+     height: 90vh;
+     top:5%;
+     left: 5%;
+     width: 90%;
+}
+
+#left_container{
+     
+     height: 100%;
+}
+
+#right_container{
+     
+     height: 100%;
+}
+
+#username{
+     background-color: #eaeaea;
+     height: 7.5rem;
+     width: 100%;
+}
+
+#notifications{
+     background-color: #8edafc;
+     height: 7.5rem;
+}
+
+.fa-bell-slash{
+     background-color: white;
+     color:#8edafc ;
+     font-size: 40px;
+     padding: 4%;
+     text-align: center;
+}
+
+#search_chat{
+     background-color: #fafafa ;
+     height: 5rem;
+
+}
+
+#chat_contacts{
+     background-color: white;
+     height: calc(100% - 20rem)
+     
+}
+
+.fontAwesome {
+     font-family: 'Helvetica', FontAwesome, sans-serif;
+}
+
+.list_contact_chat{
+     height: calc(100% / 4);
+}
+
+.list_contact_chat > img{
+     width: 15%;
+}
+
+#chat_bar_contact{
+     height: 7.5rem;
+     background-color: #eaeaea;
+}
+
+#chat_screen{
+     background-image: url("../img/mine.jpg");
+     background-size: cover;
+     height: calc(100% - 15rem);
+ }
+
+#write_message{
+     height: 7.5rem;
+     background-color: #f3eeea;
+}
+
+.testo_utente{
+     background-color: #d5f9ba;
+     
+}
+
+.testo_risposta{
+     background-color: white;
+
+}
+
+.fs_private_1{
+     font-size: 0.65rem;
+}
+
+
+
+
+
+

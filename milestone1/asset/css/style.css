@@ -1,3 +1,58 @@
 #app{
      background-color: aqua;
 }
+
+#background_header{
+     background-color: #009688;
+     height: 20vh;
+     
+}
+
+#background_main{
+     background-color: #d8dbd6;
+     height: 80vh;
+     
+}
+
+#main_container{
+     position: relative;
+     width: 100%;
+
+}
+
+#container_primary{
+     position: absolute;
+     width: 100%;
+}
+
+#container_secondary{
+     position: absolute;
+     z-index: 1;
+     height: 90vh;
+     background-color: blue;
+     top:5%;
+     left: 5%;
+     width: 90%;
+}
+
+#left_container{
+     background-color: blueviolet;
+}
+
+#right_container{
+     background-color: brown;
+}
+
+#username{
+     background-color: #eaeaea;
+     height: 12%;
+}
+
+
+
+
+
+
+
+
+

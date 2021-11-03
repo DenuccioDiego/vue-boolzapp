@@ -53,7 +53,21 @@
      height: 14%;
 }
 
+.fa-bell-slash{
+     background-color: white;
+     color:#8edafc ;
+     font-size: 40px;
+     padding: 4%;
+     text-align: center;
+}
 
+#search_chat{
+     background-color: #fafafa ;
+}
+
+.fontAwesome {
+     font-family: 'Helvetica', FontAwesome, sans-serif;
+   }
 
 
 

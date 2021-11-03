@@ -28,29 +28,29 @@
           </div>
 
           
-          <div class="row" id="container_secondary">
+          <div class="d-flex g-0" id="container_secondary">
 
                <div class="col-4" id="left_container">
-                    <div class="row px-3 fs-2 align-items-center py-2 border-end" id="username">
+                    <div class="row g-0 fs-2 align-items-center py-2 border-end ps-2" id="username">
                          
-                         <img class="col-2 rounded-circle" src="./asset/img/avatar_6.jpg" alt="">
+                         <img class="col-2 rounded-circle pe-3" src="./asset/img/avatar_6.jpg" alt="">
                          
                          <span class="col-7" >
                               Nome Utente
                          </span>
                          
                          <div class="col-3 d-flex text-secondary">
-                              <i class="px-2 fas fa-circle-notch"></i>
-                              <i class="px-2 fas fa-comment-alt"></i>
-                              <i class="px-2 fas fa-ellipsis-v"></i>
+                              <i class="pe-3 fas fa-circle-notch"></i>
+                              <i class="pe-3 fas fa-comment-alt"></i>
+                              <i class="pe-3 fas fa-ellipsis-v"></i>
                          </div>    
 
                     </div>
 
-                    <div class="row px-3 fs-5 align-items-center py-2" id="notifications">
+                    <div class="row g-0 fs-5 align-items-center py-2 w-100 ps-2" id="notifications">
                          <i class="col-2 rounded-circle fas fa-bell-slash"></i>
                          
-                         <div class="col-10" >
+                         <div class="col-10 ps-3" >
                               <span class="fw-bold">Ricevi notifiche di nuovi messaggi</span><br>
                               <span class="text-muted">
                                    <u>Attiva notifiche desktop</u>
@@ -58,38 +58,78 @@
                          </div>
                     </div>
 
-                    <div class="row" id="search_chat">
+                    <div class="row g-0 w-100" id="search_chat">
                          <div class="p-4">
-                              <div class="bg-danger"><input  class="w-100 fontAwesome" type="text" placeholder="&#xF002; Cerca o inizia una nuova chat"></div>
+                              <div><input  class="w-100 fontAwesome rounded-3 border-0 fs-5" type="text" placeholder="&#xF002; Cerca o inizia una nuova chat"></div>
                          </div>
                     </div>
 
-                    <div id="chat_contacts" class="row">
-                         <div v-for="(item, index) in contacts" class="list_contact_chat ps-4 border-bottom"> 
-                              <img class="rounded-circle py-4 col-4" v-bind:src="'./asset/img/avatar'+ item.avatar +'.jpg'" alt="">
-                              <span class="col-8">{{item.name}}</span>
+                    <div id="chat_contacts" class="">
+                         <div v-for="(item, index) in contacts" class="list_contact_chat  border-bottom"> 
+                              <img class="rounded-circle py-4 col-4 ps-2" v-bind:src="'./asset/img/avatar'+ item.avatar +'.jpg'" alt="">
+                              <span class="col-8 fs-4 ps-2">{{item.name}}</span>
                              
                          </div>
-
                     </div>
 
                </div>
 
                <div class="col-8" id="right_container">
 
+                    <div class="row g-0 align-items-center fs-2 py-2" id="chat_bar_contact">
 
+                         <div class="col-2 text-center">
+                                   <img class="w-50 rounded-pill" src="./asset/img/avatar_1.jpg" alt="">
+                         </div>
+
+                         <div class="col-6 ">
+                                   <span>{{contacts[0].name}} </span><br>
+                                   <span class="fs-4 text-muted">Ultimo accesso oggi alle</span>
+                         </div>
+
+                         <div class="col-4 text-end text-muted">
+                                   <i class="fas fa-search pe-3"></i>
+                                   <i class="fas fa-paperclip pe-3"></i>
+                                   <i class="px-2 fas fa-ellipsis-v pe-3"></i>
+                         </div>
+                    </div>
+
+                    <div id="chat_screen">
+                         <div class="p-5 row g-0">
+
+                              <div class="w-100 py-3  text-end">
+                                   <span class="p-2 rounded-3 testo_utente">
+                                        Usciamoddddddddddddddddddddddd?!
+                                   </span> 
+                              </div>
+
+                             
+                              <div class="w-100 py-3 ">
+                                   <span class="p-2 rounded-3 testo_risposta ">
+                                        OK
+                                   </span>
+                              </div>
+                         
+                         </div>
+                    
+                    </div>
+
+                    <div class="row text-center g-0 align-items-center" id="write_message">
+
+                         <div class="col-1 text-muted fs-3">
+                              <i class="far fa-smile"></i>
+                         </div>
+
+                         <input class="col-10 h-50 rounded-3 border-0 p-4" type="text" placeholder="Scrivi un messaggio">
+
+                         <div class="col-1 text-muted fs-3">
+                              <i class="fas fa-microphone"></i>
+                         </div>
+                    </div>
                </div>
-
-               <div>
-
-               </div>
-
           </div>
 
      </div>
-
-
-
 
 
 

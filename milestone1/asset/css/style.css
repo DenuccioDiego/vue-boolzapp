@@ -29,30 +29,30 @@
      position: absolute;
      z-index: 1;
      height: 90vh;
-     background-color: blue;
-     top:5%;
+     top:6.80%;
      left: 5%;
      width: 90%;
 }
 
 #left_container{
-     background-color: blueviolet;
+     
      height: 100%;
 }
 
 #right_container{
-     background-color: brown;
+     
      height: 100%;
 }
 
 #username{
      background-color: #eaeaea;
-     height: 10%;
+     height: 7.5rem;
+     width: 100%;
 }
 
 #notifications{
      background-color: #8edafc;
-     height: 15%;
+     height: 7.5rem;
 }
 
 .fa-bell-slash{
@@ -65,14 +65,14 @@
 
 #search_chat{
      background-color: #fafafa ;
-     height: 10%;
+     height: 5rem;
 
 }
 
 #chat_contacts{
      background-color: white;
-     height: 65%;
-
+     height: calc(100% - 20rem)
+     
 }
 
 .fontAwesome {
@@ -86,6 +86,33 @@
 .list_contact_chat > img{
      width: 15%;
 }
+
+#chat_bar_contact{
+     height: 7.5rem;
+     background-color: #eaeaea;
+}
+
+#chat_screen{
+     background-image: url("../img/mine.jpg");
+     background-size: cover;
+     height: calc(100% - 15rem);
+ }
+
+#write_message{
+     height: 7.5rem;
+     background-color: #f3eeea;
+}
+
+.testo_utente{
+     background-color: #d5f9ba;
+     
+}
+
+.testo_risposta{
+     background-color: white;
+
+}
+
 
 
 

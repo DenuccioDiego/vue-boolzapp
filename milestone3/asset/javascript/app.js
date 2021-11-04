@@ -98,7 +98,7 @@ var app = new Vue({
           text: this.newMessage ,
           status: "sent"
         })
-        newMessage = ""
+        this.newMessage = ""
         
       }
     } 

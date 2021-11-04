@@ -99,17 +99,23 @@
                               <div class="w-100 d-flex " :class="messaggio.status === 'sent' ? 'justify-content-end' : ''">
                                    <div class="p-2" >
 
-                                        <div class="rounded-3 text-end" :class="messaggio.status === 'sent' ? 'testo_utente' : 'testo_risposta'" >
+                                        <div class="position-relative rounded-3 text-end" :class="messaggio.status === 'sent' ? 'testo_utente' : 'testo_risposta'" >
 
                                              <p class="fs-3 p-1 m-0">
                                                   {{messaggio.text}}
+                                                  <i v-on:click="mostra === false ? mostra = true : mostra = false" class="text-muted fs-6 fas fa-caret-down"></i>
                                              </p> 
+
+                                             <div class="prova" v-if="mostra">
+                                                  <div>Message info</div>
+                                                  <div>Delete message</div>
+                                             </div>
 
                                              <span class="fs_private_1 text-muted p-1">
                                                   {{messaggio.date}}
                                              </span>
                                         </div>
-
+                                        
                                    </div> 
                               </div>
 

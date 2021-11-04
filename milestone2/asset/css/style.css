@@ -112,6 +112,8 @@
 
 .testo_risposta{
      background-color: white;
+     text-align: end;
+     justify-content: end;
 
 }
 

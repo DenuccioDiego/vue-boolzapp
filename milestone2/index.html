@@ -96,10 +96,10 @@
                     <div id="chat_screen">
                          <div class="px-5 row g-0" v-for="(messaggio, index) in contacts[activeContact].messages">
 
-                              <div class="w-100 text-end d-flex">
-                                   <div class="p-2 d-flex">
+                              <div class="w-100 d-flex" >
+                                   <div class="p-2" >
 
-                                        <div class="rounded-3" :class="messaggio.status === 'sent' ? 'testo_utente' : 'testo_risposta'">
+                                        <div class="rounded-3" :class="messaggio.status === 'sent' ? 'testo_utente' : 'testo_risposta'" >
 
                                              <p class="fs-3 p-1 m-0">
                                                   {{messaggio.text}}

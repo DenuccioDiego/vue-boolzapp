@@ -88,5 +88,11 @@ var app = new Vue({
           },
           ],
         activeContact : 0,
-     }
+        newMessage : ""
+     },
+    methods : {
+      addMessage(){
+        app.data.contacts.contacts.messages(this.newMessage)
+      }
+    } 
    })

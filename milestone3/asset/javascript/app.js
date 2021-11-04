@@ -91,8 +91,15 @@ var app = new Vue({
         newMessage : ""
      },
     methods : {
-      addMessage(){
-        app.data.contacts.contacts.messages(this.newMessage)
+      addMessage(i){
+      
+        this.contacts[i].messages.push({
+          date: "01/01/2555",
+          text: this.newMessage ,
+          status: "sent"
+        })
+        newMessage = ""
+        
       }
     } 
    })

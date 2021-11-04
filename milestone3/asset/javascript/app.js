@@ -99,12 +99,27 @@ var app = new Vue({
           status: "sent"
         })
         this.newMessage = ""
-        
-        this.contacts[i].messages.push({
+
+        setTimeout(() => {
+          
+          this.contacts[i].messages.push({
           date:"99/99/9999",
           text: "ok",
           status: "received"
-        })
-      }
+          })
+
+        }, 1000)
+ 
+      },
+
+      
+      
+
     } 
    })
+
+
+
+
+
+

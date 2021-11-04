@@ -96,6 +96,7 @@
      background-image: url("../img/mine.jpg");
      background-size: cover;
      height: calc(100% - 15rem);
+     overflow-y: scroll;
  }
 
 #write_message{
@@ -117,7 +118,9 @@
      font-size: 0.65rem;
 }
 
-
+.active{
+     background-color: rgba(223, 215, 215, 0.623);
+}
 
 
 

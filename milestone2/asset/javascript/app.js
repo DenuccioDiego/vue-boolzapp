@@ -1,8 +1,8 @@
 var app = new Vue({
-     el: '#app',
-     data: {
-       message: 'Hello Vue!',
-       contacts: [
+    el: '#app',
+    data: {
+      message: 'Hello Vue!',
+        contacts: [
           {
           name: 'Michele',
           avatar: '_1',
@@ -86,6 +86,7 @@ var app = new Vue({
           }
           ],
           },
-          ]
+          ],
+        activeContact : 0,
      }
    })

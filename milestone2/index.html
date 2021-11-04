@@ -65,10 +65,9 @@
                     </div>
 
                     <div id="chat_contacts" class="">
-                         <div v-for="(item, index) in contacts" class="list_contact_chat  border-bottom"> 
+                         <div v-for="(item, index) in contacts" class="list_contact_chat  border-bottom" :class="index === activeContact ? 'active' : ''"> 
                               <img class="rounded-circle py-4 col-4 ps-2" v-bind:src="'./asset/img/avatar'+ item.avatar +'.jpg'" alt="">
                               <span class="col-8 fs-4 ps-2">{{item.name}}</span>
-                             
                          </div>
                     </div>
 
@@ -77,13 +76,13 @@
                <div class="col-8" id="right_container">
 
                     <div class="row g-0 align-items-center fs-2 py-2" id="chat_bar_contact">
-
+                         
                          <div class="col-2 text-center">
-                                   <img class="w-50 rounded-pill" src="./asset/img/avatar_1.jpg" alt="">
+                                   <img class="w-50 rounded-pill" v-bind:src="'./asset/img/avatar'+ contacts[activeContact].avatar +'.jpg'" alt="">
                          </div>
 
                          <div class="col-6 ">
-                                   <span>{{contacts[0].name}} </span>
+                                   <span>{{contacts[activeContact].name}} </span>
                                    <p class="fs_private_1 text-muted ps-1">Ultimo accesso oggi alle 18:00</p>
                          </div>
 
@@ -95,15 +94,15 @@
                     </div>
 
                     <div id="chat_screen">
-                         <div class="p-5 row g-0">
+                         <div class="px-5 row g-0" v-if="contacts[0].visible === true" v-for="(item, index) in contacts">
 
-                              <div class="w-100 py-3  text-end d-flex justify-content-end">
+                              <div class="w-100 text-end d-flex justify-content-end">
                                    <div class="p-2">
-                                        
-                                        <div class="testo_utente rounded-3">
 
-                                             <p class=" fs-3 p-1 m-0">
-                                                  Usciamoddddddddddddddddddddddd?
+                                        <div  class="testo_utente rounded-3">
+
+                                             <p  class="fs-3 p-1 m-0">
+                                                  {{item.messages.text}}
                                              </p> 
 
                                              <span class="fs_private_1 text-muted p-1">
@@ -114,14 +113,14 @@
                                    </div> 
                               </div>
 
-                              <div class="w-100 py-3 d-flex ">
+                              <div class="w-100 d-flex ">
 
                                    <div class="p-2">
 
-                                        <div class="testo_risposta rounded-3">
+                                        <div v-if="item.messages.status === 'received'" class="testo_risposta rounded-3">
 
                                              <p class="fs-3 p-1 m-0">
-                                                  tutto ok
+                                                  {{item}}
                                              </p>
 
                                              <span class="fs_private_1 text-muted p-1">

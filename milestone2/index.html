@@ -76,7 +76,7 @@
                <div class="col-8" id="right_container">
 
                     <div class="row g-0 align-items-center fs-2 py-2" id="chat_bar_contact">
-                         
+
                          <div class="col-2 text-center">
                                    <img class="w-50 rounded-pill" v-bind:src="'./asset/img/avatar'+ contacts[activeContact].avatar +'.jpg'" alt="">
                          </div>
@@ -94,7 +94,7 @@
                     </div>
 
                     <div id="chat_screen">
-                         <div class="px-5 row g-0" v-if="contacts[0].visible === true" v-for="(item, index) in contacts">
+                         <div class="px-5 row g-0" v-if="activeContact == index" v-for="(item, index) in contacts">
 
                               <div class="w-100 text-end d-flex justify-content-end">
                                    <div class="p-2">

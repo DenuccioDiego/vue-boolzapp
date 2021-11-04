@@ -100,6 +100,11 @@ var app = new Vue({
         })
         this.newMessage = ""
         
+        this.contacts[i].messages.push({
+          date:"99/99/9999",
+          text: "ok",
+          status: "received"
+        })
       }
     } 
    })

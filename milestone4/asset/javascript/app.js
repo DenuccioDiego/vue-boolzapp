@@ -114,23 +114,18 @@ var app = new Vue({
       },
 
       searchFriend(){
-
-        if(this.friend != ""){
-          
-          for(i=0; i <= this.contacts.lenght-1; i++){
-            let x=this.contacts[i].name.filter(word => this.friend)
-            console.log("friend")
-            console.log(x)
-
-          }
-
-          
-
+          this.contacts.forEach((contact)=>{
+            
+            if(contact.name.toLowerCase().includes(this.friend.toLowerCase())){
+              
+              contact.visible = true;
+            }
+            else{
+              contact.visible = false ;
+              
+            }
+          }); 
         }
-
-      }
-      
-
     } 
    })
 

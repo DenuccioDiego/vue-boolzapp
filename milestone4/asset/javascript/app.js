@@ -88,7 +88,8 @@ var app = new Vue({
           },
           ],
         activeContact : 0,
-        newMessage : ""
+        newMessage : "" ,
+        friend: "",
      },
     methods : {
       addMessage(i){
@@ -112,7 +113,22 @@ var app = new Vue({
  
       },
 
-      
+      searchFriend(){
+
+        if(this.friend != ""){
+          
+          for(i=0; i <= this.contacts.lenght-1; i++){
+            let x=this.contacts[i].name.filter(word => this.friend)
+            console.log("friend")
+            console.log(x)
+
+          }
+
+          
+
+        }
+
+      }
       
 
     } 

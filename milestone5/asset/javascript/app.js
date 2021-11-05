@@ -139,15 +139,14 @@ var app = new Vue({
         this.counter = i
       },  
 
-      deleteMessage(i, index,){
+      deleteMessage( index,){
         console.log(this.contacts.index)
         //console.log(i)
         //console.log(this.contacts[index].messages[index].text)
         //console.log(o)
-        if(this.contacts[index].messages[index].text == i){
-          //console.log(o[index].text)
-          this.contacts[index].messages.splice(index, 1)
-        }
+        //console.log(o[index].text)
+        this.contacts[index].messages.splice(index, 1)
+        
         
 
       }

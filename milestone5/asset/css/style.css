@@ -125,7 +125,7 @@
 }
 
 
-.prova{
+.drop_down_menu{
      position: absolute;
      min-width: 175px;
      z-index: 1;
@@ -134,6 +134,14 @@
      padding: 10px 20px 10px 20px;
      background-color: rgb(226, 226, 235);
      box-shadow: 0px 0px 3px 3px rgba(158, 158, 165, 0.63);
+
      
 }
 
+.hovering{
+     display: inline!important;
+}
+
+#chat_screen i{
+     display: none;
+}

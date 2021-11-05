@@ -87,7 +87,9 @@ var app = new Vue({
           ],
           },
           ],
-        mostra : true ,
+          
+        isHovering : false ,  
+        mostra : false ,
         activeContact : 0,
         newMessage : "" ,
         friend: "",

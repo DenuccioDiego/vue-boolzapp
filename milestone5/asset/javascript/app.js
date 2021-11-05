@@ -146,7 +146,7 @@ var app = new Vue({
         //console.log(o)
         //console.log(o[index].text)
         this.contacts[this.activeContact].messages.splice(index, 1)
-        
+        this.mostra = false
         
 
       }

@@ -140,6 +140,7 @@
 
 .hovering{
      display: inline!important;
+     cursor: pointer;
 }
 
 #chat_screen i{

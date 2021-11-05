@@ -140,22 +140,17 @@ var app = new Vue({
         this.contacts[this.activeContact].messages.splice(index, 1)
         this.mostra = false
       },
-
-      dataProva(){
-
-        this.contacts.messages.date.forEach( event =>{
-
-                                      
-
-        })
-
-      }
+ 
 
     } 
    })
 
 
 
+//console.log(app.contacts[0].messages)
+//console.log(dayjs())
 
-
-console.log(dayjs())
+var now = dayjs()
+dayjs().format('DD/MM/YYYY')
+console.log(now)
+console.log(dayjs().format('DD/MM/YYYY'))

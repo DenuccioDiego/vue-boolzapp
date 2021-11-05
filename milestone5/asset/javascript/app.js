@@ -87,7 +87,7 @@ var app = new Vue({
           ],
           },
           ],
-          
+
         isHovering : false ,  
         mostra : false ,
         activeContact : 0,
@@ -96,8 +96,9 @@ var app = new Vue({
         counter: "",
      },
     methods : {
-      addMessage(i){
       
+      addMessage(i){
+
         this.contacts[i].messages.push({
           date: "01/01/2555",
           text: this.newMessage ,
@@ -106,27 +107,22 @@ var app = new Vue({
         this.newMessage = ""
 
         setTimeout(() => {
-          
           this.contacts[i].messages.push({
           date:"99/99/9999",
           text: "ok",
           status: "received"
           })
-
         }, 1000)
- 
       },
 
       searchFriend(){
           this.contacts.forEach((contact)=>{
-            
+        
             if(contact.name.toLowerCase().includes(this.friend.toLowerCase())){
-              
               contact.visible = true;
             }
             else{
               contact.visible = false ;
-              
             }
           }); 
       },
@@ -134,7 +130,6 @@ var app = new Vue({
       showDropdown(i){
         if(this.mostra == false){
           this.mostra = true
-
         }else{
           this.mostra = false
         }
@@ -142,14 +137,17 @@ var app = new Vue({
       },  
 
       deleteMessage(index){
-        console.log(this.contacts.index)
-        //console.log(i)
-        //console.log(this.contacts[index].messages[index].text)
-        //console.log(o)
-        //console.log(o[index].text)
         this.contacts[this.activeContact].messages.splice(index, 1)
         this.mostra = false
-        
+      },
+
+      dataProva(){
+
+        this.contacts.messages.date.forEach( event =>{
+
+                                      
+
+        })
 
       }
 
@@ -160,4 +158,4 @@ var app = new Vue({
 
 
 
-
+console.log(dayjs())

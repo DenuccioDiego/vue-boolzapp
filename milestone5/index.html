@@ -65,11 +65,15 @@
                     </div>
 
                     <div id="chat_contacts" class="">
-                         <div v-on:click="activeContact = index" v-if="item.visible" v-for="(item, index) in contacts" class="list_contact_chat  border-bottom" :class="index === activeContact ? 'active' : ''"> 
-                              <img class="rounded-circle py-4 col-4 ps-2" v-bind:src="'./asset/img/avatar'+ item.avatar +'.jpg'" alt="">
-                              <span class="col-8 fs-4 ps-2">{{item.name}}</span>
+                         <div v-on:click="activeContact = index" v-if="item.visible" v-for="(item, index) in contacts" class="row g-0 list_contact_chat  border-bottom" :class="index === activeContact ? 'active' : ''"> 
+                              <img class="rounded-circle py-4 col-12 ps-2" v-bind:src="'./asset/img/avatar'+ item.avatar +'.jpg'" alt="">
+                              <span class="col-6 fs-4 ps-2">{{item.name}}<br>
+                              <span class="text-muted fs-6">{{item.messages[item.messages.length - 1].text}}</span>
+                              </span>
+                              <span class="col-4 text-muted">{{item.messages[item.messages.length - 1].date}}</span>
                          </div>
                     </div>
+
 
                </div>
 
@@ -104,7 +108,6 @@
                                              <p class="fs-3 p-1 m-0 ">
                                                   {{messaggio.text}}
                                                   <i v-on:click="showDropdown(index)" :class="{hovering: isHovering}" class="text-muted fs-6 fas fa-caret-down">
-
                                                   </i>
                                              </p> 
                                             
@@ -143,6 +146,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 <script src="./asset/javascript/app.js"></script>
 
 </body>

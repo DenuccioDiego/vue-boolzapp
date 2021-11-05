@@ -109,7 +109,7 @@
 
                                              <div class="prova" v-model="counter" v-if="counter == index && mostra == true">
                                                   <div>Message info</div>
-                                                  <div>Delete message</div>
+                                                  <div v-on:click="deleteMessage(index)">Delete message</div>
                                              </div>
 
                                              <span class="fs_private_1 text-muted p-1">

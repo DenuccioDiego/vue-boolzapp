@@ -127,7 +127,7 @@ var app = new Vue({
               
             }
           }); 
-        },
+      },
 
       showDropdown(i){
         if(this.mostra == false){
@@ -137,8 +137,12 @@ var app = new Vue({
           this.mostra = false
         }
         this.counter = i
-      }  
+      },  
 
+      deleteMessage(i){
+        this.contacts[i].messages.splice(i, 1)
+        
+      }
 
     } 
    })

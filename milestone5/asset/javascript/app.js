@@ -100,7 +100,7 @@ var app = new Vue({
       addMessage(i){
 
         this.contacts[i].messages.push({
-          date: "01/01/2555",
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
           text: this.newMessage ,
           status: "sent"
         })
@@ -108,7 +108,7 @@ var app = new Vue({
 
         setTimeout(() => {
           this.contacts[i].messages.push({
-          date:"99/99/9999",
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
           text: "ok",
           status: "received"
           })
@@ -140,17 +140,7 @@ var app = new Vue({
         this.contacts[this.activeContact].messages.splice(index, 1)
         this.mostra = false
       },
- 
 
     } 
    })
 
-
-
-//console.log(app.contacts[0].messages)
-//console.log(dayjs())
-
-var now = dayjs()
-dayjs().format('DD/MM/YYYY')
-console.log(now)
-console.log(dayjs().format('DD/MM/YYYY'))

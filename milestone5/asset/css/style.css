@@ -75,9 +75,7 @@
      
 }
 
-.fontAwesome {
-     font-family: 'Helvetica', FontAwesome, sans-serif;
-}
+
 
 .list_contact_chat{
      height: calc(100% / 4);
@@ -147,3 +145,11 @@
      display: none;
 }
 
+input[type="text" i]{
+     padding: 0;
+}
+
+.fa-search{
+     background-color: white;
+     
+}

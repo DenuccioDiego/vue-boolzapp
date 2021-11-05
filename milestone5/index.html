@@ -103,10 +103,11 @@
 
                                              <p class="fs-3 p-1 m-0">
                                                   {{messaggio.text}}
-                                                  <i v-on:click="mostra === false ? mostra = true : mostra = false" class="text-muted fs-6 fas fa-caret-down"></i>
+                                                  <i v-on:click="showDropdown(index)" class="text-muted fs-6 fas fa-caret-down"></i>
                                              </p> 
+                                            
 
-                                             <div class="prova" v-if="mostra">
+                                             <div class="prova" v-model="counter" v-if="counter == index && mostra == true">
                                                   <div>Message info</div>
                                                   <div>Delete message</div>
                                              </div>

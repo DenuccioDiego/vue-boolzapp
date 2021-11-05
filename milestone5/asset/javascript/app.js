@@ -87,10 +87,11 @@ var app = new Vue({
           ],
           },
           ],
-        mostra : false ,
+        mostra : true ,
         activeContact : 0,
         newMessage : "" ,
         friend: "",
+        counter: "",
      },
     methods : {
       addMessage(i){
@@ -126,7 +127,19 @@ var app = new Vue({
               
             }
           }); 
+        },
+
+      showDropdown(i){
+        if(this.mostra == false){
+          this.mostra = true
+
+        }else{
+          this.mostra = false
         }
+        this.counter = i
+      }  
+
+
     } 
    })
 

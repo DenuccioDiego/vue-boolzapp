@@ -139,7 +139,8 @@ var app = new Vue({
         this.counter = i
       },  
 
-      deleteMessage(i, index, o){
+      deleteMessage(i, index,){
+        console.log(this.contacts.index)
         //console.log(i)
         //console.log(this.contacts[index].messages[index].text)
         //console.log(o)

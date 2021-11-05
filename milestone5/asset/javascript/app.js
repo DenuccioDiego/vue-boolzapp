@@ -139,9 +139,16 @@ var app = new Vue({
         this.counter = i
       },  
 
-      deleteMessage(i){
-        this.contacts[i].messages.splice(i, 1)
+      deleteMessage(i, index, o){
+        //console.log(i)
+        //console.log(this.contacts[index].messages[index].text)
+        //console.log(o)
+        if(this.contacts[index].messages[index].text == i){
+          //console.log(o[index].text)
+          this.contacts[index].messages.splice(index, 1)
+        }
         
+
       }
 
     } 

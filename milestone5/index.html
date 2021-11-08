@@ -73,9 +73,9 @@
                          <div v-on:click="activeContact = index" v-if="item.visible" v-for="(item, index) in contacts" class="row g-0 list_contact_chat  border-bottom" :class="index === activeContact ? 'active' : ''"> 
                               <img class="rounded-circle py-4 col-12 ps-2" v-bind:src="'./asset/img/avatar'+ item.avatar +'.jpg'" alt="">
                               <span class="col-6 fs-4 ps-2">{{item.name}}<br>
-                              <span class="text-muted fs-6">{{item.messages[item.messages.length - 1].text}}</span>
+                                   <span v-if="contacts[index].messages.length >= 1" class="text-muted fs-6">{{item.messages[item.messages.length - 1].text}}</span>
                               </span>
-                              <span class="col-4 text-muted">{{item.messages[item.messages.length - 1].date}}</span>
+                              <span v-if="contacts[index].messages.length >= 1" class="col-4 text-muted">{{item.messages[item.messages.length - 1].date}}</span>
                          </div>
                     </div>
 
@@ -92,7 +92,7 @@
 
                          <div class="col-6 ">
                                    <span>{{contacts[activeContact].name}} </span>
-                                   <p class="fs_private_1 text-muted ps-1">{{contacts[activeContact].messages[contacts[activeContact].messages.length -1].date}}</p>
+                                   <p v-if="contacts[activeContact].messages.length >= 1" class="fs_private_1 text-muted ps-1">{{contacts[activeContact].messages[contacts[activeContact].messages.length -1].date}}</p>
                          </div>
 
                          <div class="col-4 text-end text-muted">

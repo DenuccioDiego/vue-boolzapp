@@ -137,8 +137,10 @@ var app = new Vue({
       },  
 
       deleteMessage(index){
-        this.contacts[this.activeContact].messages.splice(index, 1)
+        console.log(this.contacts[this.activeContact].messages)
         this.mostra = false
+        this.contacts[this.activeContact].messages.splice(index, 1)
+        
       },
 
     } 
